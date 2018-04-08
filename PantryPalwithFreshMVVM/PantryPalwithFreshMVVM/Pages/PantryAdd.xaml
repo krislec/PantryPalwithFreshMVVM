@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          x:Class="PantryPalwithFreshMVVM.Pages.PantryAdd"
+                         xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Add to My Pantry!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label  Text="Please enter your pantry items"/>
+            <Entry Text="{Binding NameOfItem}"/>
+            
+            <Label  Text="Please enter the amount of your item"/>
+            <Entry Text="{Binding Quantity}"/>
+
+            <Label  Text="Please enter your measurement"/>
+            <Entry Text="{Binding Measurement}"/>
+
+            <Button Text="Add To My Pantry" Command="{Binding SaveCommand}"/>
+            <Button Text="Delete from My Pantry" Command="{Binding DeleteCommand}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</fresh:FreshBaseContentPage>

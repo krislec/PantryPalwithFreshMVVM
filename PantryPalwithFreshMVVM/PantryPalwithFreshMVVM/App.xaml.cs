@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using FreshMvvm;
 using Xamarin.Forms;
+using PantryPalwithFreshMVVM.PageModels;
 
 namespace PantryPalwithFreshMVVM
 {
@@ -13,7 +14,9 @@ namespace PantryPalwithFreshMVVM
 		{
 			InitializeComponent();
 
-			MainPage = new PantryPalwithFreshMVVM.MainPage();
+            var page = FreshPageModelResolver.ResolvePageModel<PantryAddPageModel>();
+            MainPage = new FreshNavigationContainer(page);
+            
 		}
 
 		protected override void OnStart ()
