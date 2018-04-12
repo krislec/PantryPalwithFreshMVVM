@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                          x:Class="PantryPalwithFreshMVVM.Pages.PantryAdd"
+                          x:Class="PantryPalwithFreshMVVM.Pages.PantryAddPage"
                          xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
     <ContentPage.Content>
         <StackLayout>
@@ -11,7 +11,7 @@
 
             <Label  Text="Please enter your pantry items"/>
             <Entry Text="{Binding NameOfItem}"/>
-            
+
             <Label  Text="Please enter the amount of your item"/>
             <Entry Text="{Binding Quantity}"/>
 

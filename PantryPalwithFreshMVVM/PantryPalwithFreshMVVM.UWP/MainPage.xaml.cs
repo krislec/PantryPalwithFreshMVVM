@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FreshMvvm;
+using PantryPalwithFreshMVVM.Data;
+using PantryPalwithFreshMVVM.UWP.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,7 +24,11 @@ namespace PantryPalwithFreshMVVM.UWP
         {
             this.InitializeComponent();
 
+            var repository = new PantryPalDatabase(FileAccessHelper.GetLocalFilePath("PantryPal.db3"));
+            FreshIOC.Container.Register(repository);
+
             LoadApplication(new PantryPalwithFreshMVVM.App());
+
         }
     }
 }

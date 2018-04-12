@@ -10,7 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -19,18 +18,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\PantryPalDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Pantry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModels\MainPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryAddPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryDetailPageModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\PantryAdd.xaml.cs">
-      <DependentUpon>PantryAdd.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PantryAddPage.xaml.cs">
+      <DependentUpon>PantryAddPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PantryAdd.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PantryAddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

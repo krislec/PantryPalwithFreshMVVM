@@ -11,9 +11,9 @@ using FreshMvvm;
 namespace PantryPalwithFreshMVVM.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PantryAdd : FreshBaseContentPage
+	public partial class PantryAddPage : FreshBaseContentPage
 	{
-		public PantryAdd ()
+		public PantryAddPage ()
 		{
 			InitializeComponent ();
 		}
