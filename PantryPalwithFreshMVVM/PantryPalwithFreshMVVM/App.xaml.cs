@@ -14,7 +14,7 @@ namespace PantryPalwithFreshMVVM
 		{
 			InitializeComponent();
 
-            var page = FreshPageModelResolver.ResolvePageModel<PantryAddPageModel>();
+            var page = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
             MainPage = new FreshNavigationContainer(page);
             
 		}

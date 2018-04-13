@@ -14,10 +14,39 @@ namespace PantryPalwithFreshMVVM.PageModels
 {
     public class MainPageModel : FreshBasePageModel
     {
-        
-            
-
-        
+        public ICommand PantryCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await CoreMethods.PushPageModel<PantryDetailPageModel>();
+                });
+            }
         }
+
+        //public ICommand RecipeCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //       {
+        //           await CoreMethods.PushPageModel<RecipePageModel>();
+        //       });
+        //    }
+        //}
+
+        //public ICommand ShoppingListCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //        {
+        //            await CoreMethods.PushPageModel<ShoppingListPageModel>();
+        //        });
+        //    }
+        //}
+
     }
+}
 

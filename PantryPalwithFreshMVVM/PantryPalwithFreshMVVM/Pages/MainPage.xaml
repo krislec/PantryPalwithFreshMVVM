@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="PantryPalwithFreshMVVM.Pages.MainPage"
+                                xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
+
+    <fresh:FreshBaseContentPage.ToolbarItems>
+        <ToolbarItem Text="Visit Your Pantry" Command="{Binding PantryCommand}"/>
+        <ToolbarItem Text="Visit Your Recipes" Command="{Binding RecipeCommand}"/>
+        <ToolbarItem Text="View Your Shopping Lists" Command="{Binding ShoppingListCommand}"/>
+    </fresh:FreshBaseContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+       
+            <Label Text="Welcome To Your Panty Pal!!"   
+                HorizontalOptions="CenterAndExpand" />
+
+        
+
+    </ContentPage.Content>
+</fresh:FreshBaseContentPage>

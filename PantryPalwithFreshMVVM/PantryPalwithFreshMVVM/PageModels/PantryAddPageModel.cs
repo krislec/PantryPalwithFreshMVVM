@@ -73,6 +73,18 @@ namespace PantryPalwithFreshMVVM.PageModels
             }
         }
 
+        public string QuantityMeasurement
+        {
+            get => _pantry.QuantityMeasurement;
+            set
+            {
+                _pantry.QuantityMeasurement = value;
+                RaisePropertyChanged();
+            }
+        }
+
+
+
         /// <summary>
         ///     Save the reminder to permanent storage.
         /// </summary>

@@ -21,13 +21,33 @@
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\MainPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryAddPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryDetailPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\PantryAddPage.xaml.cs">
       <DependentUpon>PantryAddPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PantryDetailPage.xaml.cs">
+      <DependentUpon>PantryDetailPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PantryAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PantryDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

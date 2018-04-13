@@ -10,7 +10,7 @@
                 HorizontalOptions="CenterAndExpand" />
 
             <Label  Text="Please enter your pantry items"/>
-            <Entry Text="{Binding NameOfItem}"/>
+            <Entry Text="{Binding NameOfItem}"/>  
 
             <Label  Text="Please enter the amount of your item"/>
             <Entry Text="{Binding Quantity}"/>

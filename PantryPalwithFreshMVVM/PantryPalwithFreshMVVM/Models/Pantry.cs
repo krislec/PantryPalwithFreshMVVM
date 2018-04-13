@@ -32,7 +32,22 @@ namespace PantryPalwithFreshMVVM.Models
         }
 
 
+        private string _quantityMeasurement;
+      public string QuantityMeasurement
+        {
+            get
+            {
+                return Quantity + " " + Measurement;
+            }
 
+            set
+            {
+                _quantityMeasurement = value;
+            }
+        }
+        
+      
 
+       
     }
 }
