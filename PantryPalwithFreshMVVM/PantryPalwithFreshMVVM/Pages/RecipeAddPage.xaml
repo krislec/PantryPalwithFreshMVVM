@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PantryPalwithFreshMVVM.Pages.RecipeAddPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Add A Recipe!"    
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label  Text="Please enter the name of the Recipe"/>
+            <Entry Text="{Binding NameOfRecipe}"/>
+       
+
+            <Label  Text="Enter an Ingrediant"/>
+            <Entry Text="{Binding Ingrediants}"/>
+            <Label  Text="Please enter your measurement"/>
+            <Entry Text="{Binding MeasurementOfIngrediants}"/>
+
+        
+        
+        <Editor Text="Please enter directions for Recipe"/>
+            <Entry Text="{Binding Comments}"/>
+
+    
+
+
+     
+            <Button Text="Add To My Recipes" Command="{Binding SaveCommand}"/>
+            <Button Text="Delete from My Recipes" Command="{Binding DeleteCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</fresh:FreshBaseContentPage>

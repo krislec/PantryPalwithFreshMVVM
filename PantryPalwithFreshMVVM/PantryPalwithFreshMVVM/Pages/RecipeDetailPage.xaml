@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PantryPalwithFreshMVVM.Pages.RecipeDetailPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
+
+    <fresh:FreshBaseContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddCommand}" />
+    </fresh:FreshBaseContentPage.ToolbarItems>
+
+    <ListView ItemsSource="{Binding RecipeItems}" SelectedItem="{Binding Selected}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding NameOfRecipe}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</fresh:FreshBaseContentPage>

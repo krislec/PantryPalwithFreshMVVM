@@ -39,6 +39,23 @@ namespace PantryPalwithFreshMVVM.Models
             return !string.IsNullOrWhiteSpace(NameOfRecipe);
         }
 
+        private string _recipeQuantityMeasurement;
+        public string RecipeQuantityMeasurement
+        {
+            get
+            {
+                return QuantityOfIngrediants + " " + MeasurementOfIngrediants;
+            }
 
+            set
+            {
+                _recipeQuantityMeasurement = value;
+            }
+        }
+
+        public static implicit operator Recipe(Pantry v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

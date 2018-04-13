@@ -25,6 +25,17 @@ namespace PantryPalwithFreshMVVM.PageModels
             }
         }
 
+        public ICommand RecipeCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await CoreMethods.PushPageModel<RecipeDetailPageModel>();
+                });
+            }
+        }
+
         //public ICommand RecipeCommand
         //{
         //    get
