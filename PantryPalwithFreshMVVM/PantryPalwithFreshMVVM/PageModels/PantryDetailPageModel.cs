@@ -71,7 +71,7 @@ namespace PantryPalwithFreshMVVM.PageModels
         {
             PantryItems.Clear();
             var items = Task.Run(() => _pantrypaldatabase.PantryGetAllAsync()).Result;
-            foreach (var reminder in items) PantryItems.Add(reminder);
+            foreach (var pantry in items) PantryItems.Add(pantry);
         }
     }
 }

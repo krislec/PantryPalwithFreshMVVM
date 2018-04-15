@@ -12,7 +12,7 @@
     
     <ContentPage.Content>
        
-            <Label Text="Welcome To Your Panty Pal!!"   
+            <Label Text="Welcome To Your Pantry Pal!!"   
                 HorizontalOptions="CenterAndExpand" />
 
         

@@ -37,15 +37,15 @@ namespace PantryPalwithFreshMVVM.PageModels
         {
             get
             {
-                return new Command(async (pantry) =>
+                return new Command(async (recipe) =>
                 {
-                    await CoreMethods.PushPageModel<RecipeAddPageModel>(pantry);
+                    await CoreMethods.PushPageModel<RecipeAddPageModel>(recipe);
                 });
 
             }
         }
 
-        public ObservableCollection<Pantry> RecipeItems { get; set; }
+        public ObservableCollection<Recipe> RecipeItems { get; set; }
 
         public Recipe Selected
         {
@@ -72,8 +72,8 @@ namespace PantryPalwithFreshMVVM.PageModels
         private void Load()
         {
             RecipeItems.Clear();
-            var items = Task.Run(() => _pantrypaldatabase.PantryGetAllAsync()).Result;
-            foreach (var reminder in items) RecipeItems.Add(reminder);
+            var items = Task.Run(() => _pantrypaldatabase.RecipeGetAllAsync()).Result;
+            foreach (var recipe in items) RecipeItems.Add(recipe);
         }
     }
 }
