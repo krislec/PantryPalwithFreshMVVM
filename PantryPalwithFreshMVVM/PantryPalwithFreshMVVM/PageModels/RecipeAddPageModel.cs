@@ -46,12 +46,12 @@ namespace PantryPalwithFreshMVVM.PageModels
         /// <summary>
         ///     The reminder's notes for data binding.
         /// </summary>
-        public string Ingrediants
+        public string Ingredients
         {
-            get => _recipe.Ingrediants;
+            get => _recipe.Ingredients;
             set
             {
-                _recipe.Ingrediants = value;
+                _recipe.Ingredients = value;
                 RaisePropertyChanged();
             }
         }
@@ -59,22 +59,22 @@ namespace PantryPalwithFreshMVVM.PageModels
         /// <summary>
         ///     The reminder's notes for data binding.
         /// </summary>
-        public string MeasurementOfIngrediants
+        public string MeasurementOfIngredients
         {
-            get => _recipe.MeasurementOfIngrediants;
+            get => _recipe.MeasurementOfIngredients;
             set
             {
-                _recipe.MeasurementOfIngrediants = value;
+                _recipe.MeasurementOfIngredients = value;
                 RaisePropertyChanged();
             }
         }
 
-        public string QuantityOfIngrediants
+        public string QuantityOfIngredients
         {
-            get => _recipe.QuantityOfIngrediants;
+            get => _recipe.QuantityOfIngredients;
             set
             {
-                _recipe.QuantityOfIngrediants = value;
+                _recipe.QuantityOfIngredients = value;
                 RaisePropertyChanged();
             }
         }

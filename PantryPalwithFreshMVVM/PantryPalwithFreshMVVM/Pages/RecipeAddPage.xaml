@@ -13,10 +13,10 @@
             <Entry Text="{Binding NameOfRecipe}"/>
        
 
-            <Label  Text="Enter an Ingrediant"/>
-            <Entry Text="{Binding Ingrediants}"/>
+            <Label  Text="Enter an Ingredient"/>
+            <Entry Text="{Binding Ingredients}"/>
             <Label  Text="Please enter your measurement"/>
-            <Entry Text="{Binding MeasurementOfIngrediants}"/>
+            <Entry Text="{Binding MeasurementOfIngredients}"/>
 
         
         

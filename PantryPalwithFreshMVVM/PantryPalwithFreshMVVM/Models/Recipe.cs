@@ -22,14 +22,14 @@ namespace PantryPalwithFreshMVVM.Models
         [NotNull, MaxLength(100)]
         public string NameOfRecipe { get; set; }
 
-        [Column("Quantity Of Ingrediant")]
-        public string QuantityOfIngrediants { get; set; }
+        [Column("Quantity Of Ingredient")]
+        public string QuantityOfIngredients { get; set; }
 
-        [Column("Measurement of Ingrediant")]
-        public string MeasurementOfIngrediants { get; set; }
+        [Column("Measurement of Ingredient")]
+        public string MeasurementOfIngredients { get; set; }
 
-        [Column("Ingrediant")]
-        public string Ingrediants { get; set; }
+        [Column("Ingredient")]
+        public string Ingredients { get; set; }
 
         [Column("Comments")]
         public string Comments { get; set; }
@@ -44,7 +44,7 @@ namespace PantryPalwithFreshMVVM.Models
         {
             get
             {
-                return QuantityOfIngrediants + " " + MeasurementOfIngrediants;
+                return QuantityOfIngredients + " " + MeasurementOfIngredients;
             }
 
             set
