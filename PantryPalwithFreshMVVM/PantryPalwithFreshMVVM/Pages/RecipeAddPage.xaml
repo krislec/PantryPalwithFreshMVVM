@@ -20,7 +20,7 @@
 
         
         
-        <Editor Text="Please enter directions for Recipe"/>
+        <Label Text="Please enter directions for Recipe"/>
             <Entry Text="{Binding Comments}"/>
 
     

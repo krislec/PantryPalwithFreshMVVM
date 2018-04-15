@@ -11,7 +11,37 @@
     <ListView ItemsSource="{Binding RecipeItems}" SelectedItem="{Binding Selected}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding NameOfRecipe}"/>
+                <ViewCell>
+                    
+                    
+                    
+                   <StackLayout Padding="5, 0, 0, 0"
+                                     VerticalOptions="Center">
+
+                            <Label Text="{Binding NameOfRecipe}"
+                                   FontAttributes="Bold"
+                                   FontSize="Medium" />
+
+                        <StackLayout Orientation="Horizontal"
+                                         Spacing="0">
+                            <Label Text="{Binding QuantityOfIngredients}"/>
+                            <Label Text="{Binding MeasurementOfIngredients}"/>
+                            <Label Text="{Binding Ingredients}"/>
+                            <StackLayout Orientation="Horizontal"
+                                         Spacing="0">
+                                <Label Text="{Binding Comments}"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+
+
+                    </StackLayout>
+                </ViewCell>
+                
+                
+                
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
