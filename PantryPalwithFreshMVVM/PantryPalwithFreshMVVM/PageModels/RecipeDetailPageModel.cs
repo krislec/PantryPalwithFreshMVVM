@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace PantryPalwithFreshMVVM.PageModels
 {
-    class RecipeDetailPageModel :FreshBasePageModel
+    public class RecipeDetailPageModel :FreshBasePageModel
     {
         private PantryPalDatabase _pantrypaldatabase = FreshIOC.Container.Resolve<PantryPalDatabase>();
         private Recipe _selectedRecipe = null;
@@ -28,7 +28,7 @@ namespace PantryPalwithFreshMVVM.PageModels
             {
                 return new Command(async () =>
                 {
-                    await CoreMethods.PushPageModel<RecipeAddPageModel>();
+                    await CoreMethods.PushPageModel<IngredientAddPageModel>();
                 });
             }
         }

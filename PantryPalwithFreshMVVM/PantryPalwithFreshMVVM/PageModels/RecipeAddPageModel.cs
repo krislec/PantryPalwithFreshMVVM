@@ -3,21 +3,27 @@ using PantryPalwithFreshMVVM.Data;
 using PantryPalwithFreshMVVM.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PantryPalwithFreshMVVM.PageModels
 {
-    class RecipeAddPageModel : FreshBasePageModel
+    public class RecipeAddPageModel : FreshBasePageModel
     {
         private Recipe _recipe;
+        
         private PantryPalDatabase _pantrypaldatabase = FreshIOC.Container.Resolve<PantryPalDatabase>();
 
+      public RecipeAddPageModel()
+        {
+            IngredientItems = new ObservableCollection<Ingredient>();
+        }
 
-        /// <summary>
-        ///     Delete the reminder from permanent storage.
-        /// </summary>
+
+        public ObservableCollection<Ingredient> IngredientItems { get; set; }
         public ICommand DeleteCommand
         {
             get
@@ -43,41 +49,8 @@ namespace PantryPalwithFreshMVVM.PageModels
             }
         }
 
-        /// <summary>
-        ///     The reminder's notes for data binding.
-        /// </summary>
-        public string Ingredients
-        {
-            get => _recipe.Ingredients;
-            set
-            {
-                _recipe.Ingredients = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        /// <summary>
-        ///     The reminder's notes for data binding.
-        /// </summary>
-        public string MeasurementOfIngredients
-        {
-            get => _recipe.MeasurementOfIngredients;
-            set
-            {
-                _recipe.MeasurementOfIngredients = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        public string QuantityOfIngredients
-        {
-            get => _recipe.QuantityOfIngredients;
-            set
-            {
-                _recipe.QuantityOfIngredients = value;
-                RaisePropertyChanged();
-            }
-        }
+   
+        
 
         public string Comments
         {
@@ -89,15 +62,7 @@ namespace PantryPalwithFreshMVVM.PageModels
             }
         }
 
-        public string QuantityMeasurement
-        {
-            get => _recipe.RecipeQuantityMeasurement;
-            set
-            {
-                _recipe.RecipeQuantityMeasurement = value;
-                RaisePropertyChanged();
-            }
-        }
+       
 
 
 
@@ -127,10 +92,26 @@ namespace PantryPalwithFreshMVVM.PageModels
         /// </param>
         public override void Init(object initData)
         {
+        
             _recipe = initData as Recipe;
             if (_recipe == null) _recipe = new Recipe();
+
+            Load();
+
             base.Init(initData);
             RaisePropertyChanged(string.Empty);
+        }
+
+        private void Load()
+        {
+            IngredientItems.Clear();
+            if (_recipe.ID != null)
+            {
+                var items = Task.Run(() => _pantrypaldatabase.IngredientGetByRecipeAsync((int)_recipe.ID)).Result;
+                foreach (var ingredient in items) IngredientItems.Add(ingredient);
+            }
+
+            
         }
     }
 }

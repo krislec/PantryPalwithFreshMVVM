@@ -11,16 +11,46 @@
 
             <Label  Text="Please enter the name of the Recipe"/>
             <Entry Text="{Binding NameOfRecipe}"/>
-       
 
-            <Label  Text="Enter an Ingredient"/>
-            <Entry Text="{Binding Ingredients}"/>
-            <Label  Text="Please enter your measurement"/>
-            <Entry Text="{Binding MeasurementOfIngredients}"/>
+            <ListView ItemsSource="{Binding IngredientItems}" SelectedItem="{Binding Selected}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
 
-        
-        
-        <Label Text="Please enter directions for Recipe"/>
+
+
+                            <StackLayout Padding="5, 0, 0, 0"
+                                     VerticalOptions="Center">
+
+                                <Label Text="{Binding NameOfIngredient}"
+                                   FontAttributes="Bold"
+                                   FontSize="Medium" />
+
+                                <StackLayout Orientation="Horizontal"
+                                         Spacing="1">
+                                    <Label Text="{Binding QuantityOfIngredient }"/>
+                                    <Label Text="{Binding Unit_Of_measurement }"/>
+                                    <Label Text="{Binding NameOfIngredient }"/>
+                                    <StackLayout Orientation="Horizontal"
+                                         Spacing="0">
+                                        <Label Text="{Binding Comments}"/>
+                                    </StackLayout>
+                                </StackLayout>
+
+
+
+
+
+                            </StackLayout>
+                        </ViewCell>
+
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Label Text="Please enter directions for Recipe"/>
             <Entry Text="{Binding Comments}"/>
 
     

@@ -23,10 +23,10 @@
                                    FontSize="Medium" />
 
                         <StackLayout Orientation="Horizontal"
-                                         Spacing="0">
-                            <Label Text="{Binding QuantityOfIngredients}"/>
-                            <Label Text="{Binding MeasurementOfIngredients}"/>
-                            <Label Text="{Binding Ingredients}"/>
+                                         Spacing="1">
+                            <Label Text="{Binding QuantityOfIngredient }"/>
+                            <Label Text="{Binding Unit_Of_measurement }"/>
+                            <Label Text="{Binding NameOfIngredient }"/>
                             <StackLayout Orientation="Horizontal"
                                          Spacing="0">
                                 <Label Text="{Binding Comments}"/>

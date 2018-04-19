@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PantryPalwithFreshMVVM.Pages.IngredientAddPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite">
+    
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding IngredientItems}" SelectedItem="{Binding Selected}">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding NameOfIngredient}"
+                           FontAttributes="Bold"
+                           FontSize="Medium"/>
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="1">
+                        <Label Text="{Binding QuantityOfIngredient}"/>
+                        <Label Text="{Binding Unit_Of-Measurement}"/>
+                        <Label Text="{Binding NameOfIngredient}"/>
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="0">
+
+                        </StackLayout>
+
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Add Ingredient to Your Recipe" Command="{Binding SaveCommand}"/>
+        <Button Text="Delete from Your Recipe" Command="{Binding DeleteCommand}"/>
+
+    </ContentPage.Content>
+</fresh:FreshBaseContentPage>

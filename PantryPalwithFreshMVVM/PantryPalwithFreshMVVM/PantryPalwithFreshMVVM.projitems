@@ -16,13 +16,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Data\PantryPalDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Ingredient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Pantry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
+    <Page Include="$(MSBuildThisFileDirectory)PageModels\IngredientAddPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\MainPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryAddPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\PantryDetailPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\RecipeAddPageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModels\RecipeDetailPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\IngredientAddPage.xaml.cs">
+      <DependentUpon>IngredientAddPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -73,5 +79,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\IngredientAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
   </ItemGroup>
 </Project>
